@@ -1,5 +1,5 @@
 ## Introduction
-The scSNViz script provides a comprehensive visualization of single cell-specific expressed SNVs (sceSNVs) by mapping them onto a dimensionally reduced representation of the data (e.g., UMAP, t-SNE, or PCA, depending on the selected technique). It generates a series of plots that represent the basic statistics and properties of the SNVs in the dataset. scSNViz integrates existing packages, including Seurat, Slingshot, and scType.
+The scSNViz script provides a comprehensive visualization of single cell-specific expressed SNVs (sceSNVs) by mapping them onto a dimensionally reduced representation of the data (e.g., UMAP, t-SNE, or PCA, depending on the selected technique). It generates a series of plots that represent the basic statistics and properties of the SNVs in the dataset. scSNViz integrates existing packages, including Seurat, Slingshot, scType, and CopyKat.
  
 ## Input
 The script requires two inputs:
@@ -65,6 +65,9 @@ See sample files for reference.
 	-q, --enable-dynamic-cell-size
 		Enable cell size to depend on number of reads. Default=F
 
+  	-u, --enable-copykat
+   		Enable CopyKat for displaying CNVs. Default=F
+
 ## Output
 scSNViz generates outputs for the set of the sceSNVs and for each individual sceSNV, as follows:
 
@@ -72,20 +75,44 @@ For the set of the sceSNVs, the produced figures include:
 - Histogram of mean VAF per SNV per cell
 - Histogram of the number of SNVs per cell
 - Histogram of the number of Variant Reads per cell
-- Histogram of the Total VAF per cell (VARreads/(VARreads+REFreads) per cell)
+- Histogram of the Total VAF per cell (VARreads/(VARreads + REFreads) per cell)
   
-- 3D UMAP representation of mean VAF for each cell
-- 3D UMAP representation of median VAF for each cell
-- 3D UMAP representation of number of number of SNVs for each cell
-- 3D UMAP representation of number of Variant Reads for each cell
-- 3D UMAP representation of number of Reference Reads for each cell
-- 3D UMAP representation of Total VAF per cell (VARreads/(VARreads+REFreads) per cell)
+- 3D UMAP/t-SNE/PCA representation of mean VAF for each cell
+- 3D UMAP/t-SNE/PCA representation of median VAF for each cell
+- 3D UMAP/t-SNE/PCA representation of number of number of SNVs for each cell
+- 3D UMAP/t-SNE/PCA representation of number of Variant Reads for each cell
+- 3D UMAP/t-SNE/PCA representation of number of Reference Reads for each cell
+- 3D UMAP/t-SNE/PCA representation of Total VAF per cell (VARreads/(VARreads+REFreads) per cell)
 - a text file of summary statistics per cell
   
 For the individual sceSNVs in the set, scSNViz generates gradient color representation plots of the following:
   - Expressed Variant Allele Fraction per cell (VAF_RNA)
   - Number of Reference Reads per cell (N_REF)
   - Number of Variant Reads per cell (N_VAR)
+
+```mermaid
+graph TD;
+    A[sample_SNVs_dimensionality_reduction_xry] --> B[Exploratory_Combined_Plots.html]
+    A --> C[sample_SNVs-summary.txt]
+    A --> D[Figures_Individual_Plots_HTML]
+    D --> E[Cell_types_scType.html (optional)]
+    D --> F[Mean_VAF_RNA.html]
+    D --> G[Median_VAF_RNA.html]
+    D --> H[N_REFreads.html]
+    D --> I[Total_VAF_RNA.html]
+    D --> J[N_sceSNVs.html]
+    D --> K[N_VARreads.html]
+    D --> L[N_SNV.png]
+    D --> M[MeanSNVsVAF.png]
+    D --> N[N_VARreadsCounts.png]
+    D --> O[TotalVAF.png]
+    D --> P[Individual_sceSNVs]
+    P --> Q[VARreads]
+    P --> R[REFreads]
+    P --> S[VAF]
+    Q --> T[3D plot HTML files for each sceSNV]
+    R --> U[3D plot HTML files for each sceSNV]
+    S --> V[3D plot HTML files for each sceSNV]
 
 ## Installation
 
