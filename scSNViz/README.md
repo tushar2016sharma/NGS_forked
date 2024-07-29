@@ -114,7 +114,7 @@ graph TD;
     Q --> T[3D plot HTML files for each sceSNV]
     R --> U[3D plot HTML files for each sceSNV]
     S --> V[3D plot HTML files for each sceSNV]
-
+```
 
 ## Installation
 
