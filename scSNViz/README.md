@@ -99,6 +99,7 @@ sample_SNVs_dimensionality_reduction_xry/
 ├── sample_SNVs-summary.txt
 └── Figures_Individual_Plots_HTML/
     ├── Cell_types_scType.html (optional)
+    ├── CNVs_CopyKat.html (optional)
     ├── Mean_VAF_RNA.html
     ├── Median_VAF_RNA.html
     ├── N_REFreads.html
@@ -111,11 +112,11 @@ sample_SNVs_dimensionality_reduction_xry/
     ├── TotalVAF.png
     └── Individual_sceSNVs/
         ├── VARreads/
-        │   └── 3D plot HTML files for each sceSNV
+        │   └── 3D VARreads plot HTML files for each sceSNV
         ├── REFreads/
-        │   └── 3D plot HTML files for each sceSNV
+        │   └── 3D REFreads plot HTML files for each sceSNV
         └── VAF/
-            └── 3D plot HTML files for each sceSNV
+            └── 3D VAF plot HTML files for each sceSNV
 ```
 
 ## Installation
