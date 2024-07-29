@@ -90,30 +90,39 @@ For the individual sceSNVs in the set, scSNViz generates gradient color represen
   - Number of Reference Reads per cell (N_REF)
   - Number of Variant Reads per cell (N_VAR)
 
+## Output directory structure
 
 ```mermaid
 graph TD;
-    A[sample_SNVs_dimensionality_reduction_xry] --> B[Exploratory_Combined_Plots.html]
+    A[sample_SNVs_dimensionality_reduction_xry]
+    A --> B[Exploratory_Combined_Plots.html]
     A --> C[sample_SNVs-summary.txt]
     A --> D[Figures_Individual_Plots_HTML]
-    D --> E[Cell_types_scType.html]
-    D --> F[Mean_VAF_RNA.html]
-    D --> G[Median_VAF_RNA.html]
-    D --> H[N_REFreads.html]
-    D --> I[Total_VAF_RNA.html]
-    D --> J[N_sceSNVs.html]
-    D --> K[N_VARreads.html]
-    D --> L[N_SNV.png]
-    D --> M[MeanSNVsVAF.png]
-    D --> N[N_VARreadsCounts.png]
-    D --> O[TotalVAF.png]
-    D --> P[Individual_sceSNVs]
-    P --> Q[VARreads]
-    P --> R[REFreads]
-    P --> S[VAF]
-    Q --> T[3D plot HTML files for each sceSNV]
-    R --> U[3D plot HTML files for each sceSNV]
-    S --> V[3D plot HTML files for each sceSNV]
+    
+    subgraph Figures_Individual_Plots_HTML
+        D --> E[Cell_types_scType.html]
+        D --> F[Mean_VAF_RNA.html]
+        D --> G[Median_VAF_RNA.html]
+        D --> H[N_REFreads.html]
+        D --> I[Total_VAF_RNA.html]
+        D --> J[N_sceSNVs.html]
+        D --> K[N_VARreads.html]
+        D --> L[N_SNV.png]
+        D --> M[MeanSNVsVAF.png]
+        D --> N[N_VARreadsCounts.png]
+        D --> O[TotalVAF.png]
+        D --> P[Individual_sceSNVs]
+
+        subgraph Individual_sceSNVs
+            P --> Q[VARreads]
+            P --> R[REFreads]
+            P --> S[VAF]
+
+            Q --> T[3D plot HTML files for each sceSNV]
+            R --> U[3D plot HTML files for each sceSNV]
+            S --> V[3D plot HTML files for each sceSNV]
+        end
+    end
 ```
 
 ## Installation
