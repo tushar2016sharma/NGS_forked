@@ -95,7 +95,7 @@ graph TD;
     A[sample_SNVs_dimensionality_reduction_xry] --> B[Exploratory_Combined_Plots.html]
     A --> C[sample_SNVs-summary.txt]
     A --> D[Figures_Individual_Plots_HTML]
-    D --> E[Cell_types_scType.html (optional)]
+    D --> E[Cell_types_scType.html]
     D --> F[Mean_VAF_RNA.html]
     D --> G[Median_VAF_RNA.html]
     D --> H[N_REFreads.html]
