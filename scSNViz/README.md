@@ -122,8 +122,8 @@ For the set of the sceSNVs, the separately produced figures show the following:
   
 **Individual_sceSNVs**: contains 3D dmensionality reduction plots for _individual sceSNV_ of the following:
   - Expressed Variant Allele Fraction per cell (VAF_RNA)
-  - Number of Reference Reads per cell (N_REF)
-  - Number of Variant Reads per cell (N_VAR)
+  - Number of Reference Reads per cell (REFreads)
+  - Number of Variant Reads per cell (VARreads)
 
 **Exploratory_Combined_Plots**: displays all the separately generated plots above into one single html for modularity
 
