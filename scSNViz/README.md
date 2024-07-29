@@ -90,6 +90,7 @@ For the individual sceSNVs in the set, scSNViz generates gradient color represen
   - Number of Reference Reads per cell (N_REF)
   - Number of Variant Reads per cell (N_VAR)
 
+
 ```mermaid
 graph TD;
     A[sample_SNVs_dimensionality_reduction_xry] --> B[Exploratory_Combined_Plots.html]
@@ -113,6 +114,7 @@ graph TD;
     Q --> T[3D plot HTML files for each sceSNV]
     R --> U[3D plot HTML files for each sceSNV]
     S --> V[3D plot HTML files for each sceSNV]
+
 
 ## Installation
 
