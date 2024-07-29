@@ -128,6 +128,7 @@ For the set of the sceSNVs, the separately produced figures show the following:
 **Exploratory_Combined_Plots**: displays all the separately generated plots above into one single html for modularity
 
 <br>
+
 ## Installation
 
 Download the R file: 
