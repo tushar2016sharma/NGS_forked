@@ -117,19 +117,20 @@ For the set of the sceSNVs, the separately produced figures show the following:
 - **N_VARreads**: 3D UMAP/t-SNE/PCA representation of number of Variant Reads for each cell
 - **N_REFreads**: 3D UMAP/t-SNE/PCA representation of number of Reference Reads for each cell
 - **Total_VAF_RNA**: 3D UMAP/t-SNE/PCA representation of Total VAF per cell
-
-
+<br>
+<br>
 **sample_SNVs-summary**: a text file of the summary statistics per cell
-
-  
+<br>
+<br>
 **Individual_sceSNVs**: contains 3D dmensionality reduction plots for _individual sceSNV_ of the following:
   - Expressed Variant Allele Fraction per cell (VAF_RNA)
   - Number of Reference Reads per cell (REFreads)
   - Number of Variant Reads per cell (VARreads)
-
-
+<br>
+<br>
 **Exploratory_Combined_Plots**: displays all the separately generated plots above into one single html for modularity
-
+<br>
+<br>
 ## Installation
 
 Download the R file: 
