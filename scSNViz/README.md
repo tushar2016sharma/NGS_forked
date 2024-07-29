@@ -132,13 +132,16 @@ For the set of the sceSNVs, the separately produced figures show the following:
 ## Installation
 
 Download the R file: 
-- [scSNViz.r](https://raw.githubusercontent.com/HorvathLab/NGS/master/scSNViz/scSNViz.r) (Updated: 06/14/2024)
+- [scSNViz.r](https://raw.githubusercontent.com/HorvathLab/NGS/master/scSNViz/scSNViz.r) (Updated: 07/27/2024)
 
 The following CRAN packages are required:
-- optparse, stringr, openxlsx, HGNChelper, Seurat, ggplot2, dplyr, plotly, htmlwidgets.
+- optparse, stringr, openxlsx, HGNChelper, Seurat, ggplot2, dplyr, plotly, htmlwidgets, htmltools, jsonlite.
 
 The following Bioconductor packages are required:
 - glmGamPoi, slingshot.
+
+Other packages:
+- copykat 
 
 Note too that the matrixStats package (a dependancy of Seurat) needs to be downgraded to version 1.1.0:
 - `> remotes::install_version("matrixStats", version="1.1.0")`
@@ -151,7 +154,7 @@ Note too that the matrixStats package (a dependancy of Seurat) needs to be downg
 % Rscript scSNViz.r -t sample_SNVs.txt -m SAMNXX_wasp_Solo.out/Gene/filtered/
                          --dimensionality-reduction=umap \
                          --th-vars=1 --th-reads=10 \
-                         -i --tissue-type=Liver -c -d -e 
+                         -i --tissue-type=Liver -c -d -u  
 ```
 ```
 % Rscript scSNViz.r -t sample_SNVs.txt -r sample_Seurat_object.rds \
