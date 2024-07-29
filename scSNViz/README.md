@@ -92,6 +92,7 @@ For the individual sceSNVs in the set, scSNViz generates gradient color represen
 
 ### Output directory structure
 
+```
 sample_SNVs_dimensionality_reduction_xry/
 │
 ├── Exploratory_Combined_Plots.html
@@ -115,7 +116,7 @@ sample_SNVs_dimensionality_reduction_xry/
         │   └── 3D plot HTML files for each sceSNV
         └── VAF/
             └── 3D plot HTML files for each sceSNV
-
+```
 
 ## Installation
 
