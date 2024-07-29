@@ -104,6 +104,7 @@ sample_SNVs_dimensionality_reduction_xry/
 #### Description
 
 For the set of the sceSNVs, the separately produced figures show the following:
+```
 **MeanSNVsVAF**: Histogram of mean VAF per SNV per cell
 **N_SNV**: Histogram of the number of SNVs per cell
 **N_VARreadsCounts**: Histogram of the number of Variant Reads per cell
@@ -125,6 +126,7 @@ For the set of the sceSNVs, the separately produced figures show the following:
   - Number of Variant Reads per cell (VARreads)
 
 **Exploratory_Combined_Plots**: displays all the separately generated plots above into one single html for modularity
+```
 
 ## Installation
 
